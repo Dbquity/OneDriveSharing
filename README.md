@@ -2,7 +2,11 @@
 
 I am developing a .NET MAUI app that lets people collaborate with others using their cloud storage account and have run into the problem that anonymously sharing a file on OneDrive personal stopped working. Since recently, the `shareId` retrieved via the OneDrive REST API can only be used from the same account that shared the item.
 
-Since this turns out to be a showstopper for my app using OneDrive, I do hope that the set of repro steps below can help resolve the issue :-)
+I hope that the set of repro steps below can help resolve the issue :-)
+
+> **Observation**
+> The `link.weburl` from the response in step 2 actually shows the file content when opened in a browser that is not logged in to OneDrive.  
+> Please see the [last section](#observation-linkweburl-works-without-a-bearer-token) of this file.
 
 ## Step 1. Create a file to share
 On a OneDrive personal account for a.test@dbquity.com that I use for test purposes, I have created a folder, “Test”, that contains a single file, “ToShare.txt”:
@@ -61,3 +65,8 @@ But when I log out of the test account and attempt to anonymously access the sha
 Previously, this anonymous access (i.e. without a bearer access token) to the share did work.
 
 Access is also denied if I try to access the shared item when logged in to another OneDrive account.
+
+## Observation: link.weburl works without a bearer token
+When pasting the link.weburl, https://1drv.ms/t/c/db31c5aff0d22737/EUqSzNwSVdZAqXFz_2SM8Q4BVhIPGU7NrPDdhs6jzGNk_A, from the response of step 2 into a browser that is not logged in to OneDrive, the file contents and some metadata are displayed.
+![image](https://github.com/user-attachments/assets/2693b723-32ff-461c-8cbb-376b0ca32ad3)
+
