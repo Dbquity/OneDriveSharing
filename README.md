@@ -4,9 +4,6 @@ I am developing a .NET MAUI app that lets people collaborate with others using t
 
 Below is a set of repro steps that I hope can help resolve the issue :-)
 
-Best regards
-Lars Hammer, lars.hammer@dbquity.com
-
 ## Step 1. Create a file to share
 On a OneDrive personal account for a.test@dbquity.com that I use for test purposes, I have created a folder, “Test”, that contains a single file, “ToShare.txt”:
 ![image](https://github.com/user-attachments/assets/703f0f40-7d4b-4ed0-a011-dd03143b8710)
