@@ -60,4 +60,4 @@ But when I log out of the test account and attempt to anonymously access the sha
 
 Previously, this anonymous access (i.e. without a bearer access token) to the share did work.
 
-Access is also denied, if I try to access the shared item when logged in to another OneDrive account.
+Access is also denied if I try to access the shared item when logged in to another OneDrive account.
