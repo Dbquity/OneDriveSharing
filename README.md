@@ -67,6 +67,6 @@ Previously, this anonymous access (i.e. without a bearer access token) to the sh
 Access is also denied if I try to access the shared item when logged in to another OneDrive account.
 
 ## Observation: link.weburl works without a bearer token
-When pasting the link.weburl, https://1drv.ms/t/c/db31c5aff0d22737/EUqSzNwSVdZAqXFz_2SM8Q4BVhIPGU7NrPDdhs6jzGNk_A, from the response of step 2 into a browser that is not logged in to OneDrive, the file contents and some metadata are displayed.
+When pasting the `link.weburl`, https://1drv.ms/t/c/db31c5aff0d22737/EUqSzNwSVdZAqXFz_2SM8Q4BVhIPGU7NrPDdhs6jzGNk_A, from the response of step 2 into a browser that is not logged in to OneDrive, the file contents and some metadata are displayed:
 ![image](https://github.com/user-attachments/assets/2693b723-32ff-461c-8cbb-376b0ca32ad3)
 
