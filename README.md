@@ -5,8 +5,7 @@ I am developing a .NET MAUI app that lets people collaborate with others using t
 I hope that the set of repro steps below can help resolve the issue :-)
 
 > **Observation**
-> The `link.weburl` from the response in step 2 actually shows the file content when opened in a browser that is not logged in to OneDrive.  
-> Please see the [last section](#observation-linkweburl-works-without-a-bearer-token) of this file.
+> The `link.weburl` from the response in step 2 actually shows the file content when opened in a browser that is not logged in to OneDrive. Please see the [last section](#observation-linkweburl-works-without-a-bearer-token) of this file for more detail.
 
 ## Step 1. Create a file to share
 On a OneDrive personal account for a.test@dbquity.com that I use for test purposes, I have created a folder, “Test”, that contains a single file, “ToShare.txt”:
@@ -68,5 +67,7 @@ Access is also denied if I try to access the shared item when logged in to anoth
 
 ## Observation: link.weburl works without a bearer token
 When pasting the `link.weburl`, https://1drv.ms/t/c/db31c5aff0d22737/EUqSzNwSVdZAqXFz_2SM8Q4BVhIPGU7NrPDdhs6jzGNk_A, from the response of step 2 into a browser that is not logged in to OneDrive, the file contents and some metadata are displayed:
+
 ![image](https://github.com/user-attachments/assets/2693b723-32ff-461c-8cbb-376b0ca32ad3)
 
+Since the `shareId` is an encoding of the `link.weburl` as documented [here](https://learn.microsoft.com/en-us/graph/api/shares-get?view=graph-rest-1.0&tabs=http#encoding-sharing-urls), and since the browser url above reedeems the `shareId` (https://onedrive.live.com/?redeem={shareId}), it is clear that the `shareId` is sufficient to get at the shared item without the bearer token and it appears that the problem is tied to the `shares` endpoint used in steps 2a and 3 and not to the `createLink` operation in step 2.
