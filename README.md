@@ -8,6 +8,9 @@ Below is a set of repro steps that I hope can help resolve the issue :-)
 On a OneDrive personal account for a.test@dbquity.com that I use for test purposes, I have created a folder, “Test”, that contains a single file, “ToShare.txt”:
 ![image](https://github.com/user-attachments/assets/703f0f40-7d4b-4ed0-a011-dd03143b8710)
 
+> **Note**  
+> My app uses its app folder and hence the `Files.ReadWrite.AppFolder` and `offline_access` permission scopes when authorizing using the code flow with PKCE.
+
 ## Step 2. Use the OneDrive REST API to obtain a `shareId` for the file
 Next, I use Graph Explorer, https://developer.microsoft.com/en-us/graph/graph-explorer, to share that file anonymously as described here: https://learn.microsoft.com/en-us/onedrive/developer/rest-api/api/driveitem_createlink?view=odsp-graph-online using
 ```
