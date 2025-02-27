@@ -4,7 +4,7 @@ I am developing a .NET MAUI app that lets people collaborate with others using t
 
 I hope that the set of repro steps below can help resolve the issue :-)
 
-> **Observation**
+> **Observation**  
 > The `link.weburl` from the response in step 2 actually shows the file content when opened in a browser that is not logged in to OneDrive. Please see the [last section](#observation-linkweburl-works-without-a-bearer-token) of this file for more detail.
 
 ## Step 1. Create a file to share
