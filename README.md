@@ -1,4 +1,4 @@
-# Sharing a file anonymously on a OneDrive personal account fails
+# Sharing a file anonymously on a OneDrive personal account no longer works
 
 I am developing a .NET MAUI app that lets people collaborate with others using their cloud storage account and have run into the problem that anonymously sharing a file on OneDrive personal stopped working. Since recently, the `shareId` retrieved via the OneDrive REST API can only be used from the same account that shared the item.
 
